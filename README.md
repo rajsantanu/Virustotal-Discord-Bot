@@ -24,7 +24,7 @@ If malicious content is detected, it can notify the server or respond accordingl
 
 ## ⚙️ Technologies Used
 
-- 🐍 Python  
+- 🐍 Python 3.12 *(Tested and stable; Python 3.13.1 caused dependency issues)* 
 - 🤖 Discord.py  
 - 🛠️ VirusTotal API  
 - 📡 Requests  
