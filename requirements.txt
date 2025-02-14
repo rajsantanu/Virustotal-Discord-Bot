@@ -1,0 +1,4 @@
+requests
+vt-py
+discord
+urllib
