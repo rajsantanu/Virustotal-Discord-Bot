@@ -1,6 +1,6 @@
 from discord import Intents, Client, Message
 
-from responses import *
+from responses import get_response, get_edited_response
 
 with open('creds.txt', 'r') as file:
     TOKEN = file.read().splitlines()[0]
