@@ -35,8 +35,8 @@ If malicious content is detected, it can notify the server or respond accordingl
 
 1. **Clone the repository**:  
     ```bash
-    git clone https://github.com/your_username/repo_name.git
-    cd repo_name
+    git clone https://github.com/Yajus114/virustotal-discord-bot.git
+    cd virustotal-discord-bot
     ```
 
 2. **Install dependencies**:  
