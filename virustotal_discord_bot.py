@@ -1,10 +1,12 @@
+import os
+
 from discord import Intents, Client, Message
+from dotenv import load_dotenv
 
 from responses import get_response, get_edited_response
 
-with open('creds.txt', 'r') as file:
-    TOKEN = file.read().splitlines()[0]
-
+load_dotenv()
+TOKEN = os.getenv("TOKEN")
 intents: Intents = Intents.default()
 intents.message_content = True  # NOQA
 client: Client = Client(intents=intents)

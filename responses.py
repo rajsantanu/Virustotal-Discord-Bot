@@ -1,12 +1,13 @@
 import json
+import os
 import re
 from urllib.parse import urlparse
 
 import requests
+from dotenv import load_dotenv
 
-with open('creds.txt', 'r') as file:
-    API_KEY: str = file.read().splitlines()[1]
-
+load_dotenv()
+API_KEY = os.getenv("API_KEY")
 
 def _analyse(request_url: str) -> dict | str:
     try:
