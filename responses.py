@@ -40,7 +40,7 @@ def _analyse(request_url: str) -> dict | str:
 def get_response(user_input: str) -> str:
     pattern: str = r'<(https?://[^>\s]+)>|\[(?:[^\]]+)\]\(\s*(https?://[^\s)]+)\s*\)|\b(https?://[^\s)]+)'
     matches = re.findall(pattern, user_input)
-    links = [urlparse(url).geturl() for match in matches for url in match if url]
+    links = {urlparse(url).geturl() for match in matches for url in match if url}
     if not links:
         return ''
     responses: list = []
