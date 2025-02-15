@@ -25,8 +25,8 @@ async def send_message(message: Message, user_message: str) -> None:
 
             # Uncomment this if you wish for the bot to delete the sus link after detection. You can add a delay like this:
             # await message.delete(delay=x) where x is the number of seconds for the delay
-            await message.channel.send("The sus link will now be deleted. Do NOT click on the link.")
-            await message.delete()
+            # await message.channel.send("The sus link will now be deleted. Do NOT click on the link.")
+            # await message.delete()
             # TODO: save the sus URLs in a database (but why)
 
     except Exception as e:
@@ -42,6 +42,8 @@ async def send_message_edited(message: Message, user_message: str) -> None:
         response: str = get_edited_response(user_message)
         if response:
             await message.author.send(response) if is_private else await message.channel.send(response)
+            await message.channel.send("The sus link will now be deleted. Do NOT click on the link.")
+            await message.delete()
     except Exception as e:
         print(e)
 
