@@ -44,10 +44,10 @@ If malicious content is detected, it can notify the server or respond accordingl
     pip install -r requirements.txt
     ```
 3. **Prepare the credentials file**:  
-    - Create a `creds.txt` file in the root directory with:  
+    - Create a `creds.tx.envt` file in the root directory with:  
       ```
-      DISCORD_TOKEN
-      VIRUSTOTAL_API_KEY
+      TOKEN=YOUR_DISCROD_TOKEN
+      API_KEY=YOUR_VIRUSTOTAL_API_KEY
       ```
       *Line 1:* Your Discord bot token  
       *Line 2:* Your VirusTotal API key  
