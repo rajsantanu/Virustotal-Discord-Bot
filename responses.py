@@ -24,7 +24,7 @@ def _analyse(request_url: str) -> dict | str:
             "accept": "application/json",
             "x-apikey": API_KEY
         }
-
+        print("[+] Analysing the link")
         with requests.post(url, data=payload, headers=headers_url) as req:
             url_id = json.loads(req.content)["data"]["id"]
         with requests.get(analyses + url_id, headers=headers_analyses) as res:
