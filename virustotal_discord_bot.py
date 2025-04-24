@@ -1,17 +1,7 @@
-from flask import Flask
 import os
-
-app = Flask(__name__)
-
-@app.route("/")
-def home():
-    return "Hello, Render!"
-
-
-
 from discord import Intents, Client, Message
 from dotenv import load_dotenv
-
+from flask import Flask
 from responses import get_response, get_edited_response
 
 load_dotenv()
@@ -79,5 +69,14 @@ async def on_message_edit(message_before: Message, message_after: Message) -> No
 
 if __name__ == '__main__':
     client.run(token=TOKEN)
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Hello, Render!"
+
+if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))  # ✅ Use Render's PORT env variable
     app.run(host="0.0.0.0", port=port)
+
